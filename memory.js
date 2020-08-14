@@ -74,12 +74,12 @@ let memoryObj = {
 
     gameover : function() {
         this.started = false;
-        console.log("game over")
+        alert("game over")
     },
 
     win : function() {
         this.started = false;
-        console.log("win")
+        alert("you win")
     },
 
     checkDuplicate : function(n) {
