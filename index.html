@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="memory.js"></script>
+    <link rel="stylesheet" type="text/css" href="memory.css">
+</head>
+<body>
+<div style="margin:10px;padding:5px">
+    <button id="cmdStart">Start</button>
+    <span id="text"></span>
+</div>
+<div id="memoryDiv"></div>
+
+<script>
+    memoryObj.init(document.getElementById('memoryDiv'));
+
+    
+    $('.plate').mouseover(function() {
+        memoryObj.plate_mouseover(this);
+    })
+    $('.plate').mouseout(function() {
+        memoryObj.plate_mouseout(this);
+    }) 
+    $('.plate').click(function() {
+        memoryObj.plate_click(this);
+    }) 
+
+    $('#cmdStart').click(function() {
+        memoryObj.reset();
+        memoryObj.generateSequence();
+        memoryObj.displaySequence();
+    })
+
+</script>
+
+
+</body>
+</html>
